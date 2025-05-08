@@ -18,4 +18,8 @@ public interface ConsertoRepository extends JpaRepository<Conserto, Long> {
     @Query("SELECT new com.oficina.carrepair.dto.ConsertoSummaryDTO(c.dataEntrada, c.dataSaida, " +
            "c.mecanico.nome, c.veiculo.marca, c.veiculo.modelo) FROM Conserto c")
     List<com.oficina.carrepair.dto.ConsertoSummaryDTO> findAllConsertosSummary();
+
+    long countByMecanicoId(Long mecanicoId);
+
+    long countByVeiculoId(Long veiculoId);
 }
