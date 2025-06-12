@@ -135,8 +135,3 @@ Atualiza parcialmente um conserto. Envie apenas os campos que deseja alterar.
 Realiza a exclusão lógica do conserto.
 * **Exemplo de URL:** `http://localhost:8080/api/consertos/1`
 * **Resposta de Sucesso (`204 No Content`):** Retorna uma resposta vazia.
-
----
-## ✒️ Autor
-
-* **[Seu Nome Completo]** - [seu-linkedin-ou-github](https://...)
