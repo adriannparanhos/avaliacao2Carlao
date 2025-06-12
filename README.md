@@ -64,8 +64,8 @@ Para obter um token, envie uma requisição `POST` para o endpoint `/login`.
 * **Corpo da Requisição:**
     ```json
     {
-      "login": "seu-usuario",
-      "senha": "sua-senha"
+      "login": "pw3",
+      "senha": "pw3"
     }
     ```
 * **Resposta de Sucesso (`200 OK`):**
@@ -109,29 +109,3 @@ Cria um novo conserto com dados embutidos de mecânico e veículo.
       }
     }
     ```
-* **Resposta de Sucesso (`201 Created`):** Retorna o objeto criado com seu novo ID.
-
-#### `GET /api/consertos`
-Lista todos os consertos ativos. Suporta paginação (ex: `/api/consertos?size=5&page=0&sort=id,desc`).
-
-#### `GET /api/consertos/{id}`
-Busca um conserto pelo ID.
-* **Exemplo de URL:** `http://localhost:8080/api/consertos/1`
-
-#### `PATCH /api/consertos/{id}`
-Atualiza parcialmente um conserto. Envie apenas os campos que deseja alterar.
-* **Exemplo de URL:** `http://localhost:8080/api/consertos/1`
-* **Corpo da Requisição (Exemplo):**
-    ```json
-    {
-      "dataSaida": "20/06/2025",
-      "mecanico": {
-        "anos_experiencia": 13
-      }
-    }
-    ```
-
-#### `DELETE /api/consertos/{id}`
-Realiza a exclusão lógica do conserto.
-* **Exemplo de URL:** `http://localhost:8080/api/consertos/1`
-* **Resposta de Sucesso (`204 No Content`):** Retorna uma resposta vazia.
